@@ -1,0 +1,95 @@
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+img {
+  cursor: pointer;
+}
+
+html {
+  background-image: url(ocean.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+button {
+  color: white;
+  background-color: blue;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+}
+
+h1 {
+  letter-spacing: 4px;
+  font-size: 32px;
+  text-transform: uppercase;
+ 
+}
+
+h2 {
+  letter-spacing: 4px;
+  font-size: 16px;
+  text-transform: uppercase
+
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  min-height: 100vh;
+}
+
+.text-container {
+  margin-bottom: 150px;
+  margin-left: auto;
+  width: 70%;
+  padding: 10px;
+  font-size: 35px;
+
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  font-size: 25px;
+}

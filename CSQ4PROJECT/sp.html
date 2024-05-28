@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./sp.css">
+</head>
+
+<body class="page">
+  <header>
+    <img src="logo.png" class="logo" onclick="location.href='home-page.html'" />
+  </header>
+  <form class="form-container" id="signup-form">
+    <div class="input-container">
+      <label>First Name</label>
+      <div class="input-required">
+        <input type="text" required=true class="normal-input" id="firstName" />
+        <span class="required">*</span>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label>Last Name</label>
+      <div class="input-required">
+        <input type="text" required=true class="normal-input" id="lastName" />
+        <span class="required">*</span>
+      </div>
+    </div>
+
+    <fieldset id="sex">
+      <legend>Sex
+        <span class="required">*</span>
+      </legend>
+
+      <div class="radio-container">
+        <input type="radio" name="sex" value="Male" required />
+        <label>Male</label>
+      </div>
+
+      <div class="radio-container">
+        <input type="radio" name="sex" value="Female" required />
+        <label>Female</label>
+      </div>
+
+      <div class="radio-container">
+        <input type="radio" name="sex" value="Prefer Not To Say" required />
+        <label>Prefer Not To Say</label>
+      </div>
+    </fieldset>
+
+    <div class="input-container">
+      <label>Email</label>
+      <div class="input-required">
+        <input type="email" required=true class="normal-input" id="email" />
+        <span class="required">*</span>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label>Password</label>
+      <div class="input-required">
+        <input type="password" required=true class="normal-input" />
+        <span class="required">*</span>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label>Contact Number</label>
+      <div class="input-required">
+        <input type="tel" class="normal-input" />
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label>Why do you support this campaign?</label>
+      <div class="input-required">
+        <textarea required=true id="support"></textarea>
+        <span class="required">*</span>
+      </div>
+    </div>
+    <div class="button-container">
+      <button type="submit" class="submit-button">Sign up</button>
+    </div>
+  </form>
+  <script>
+    function submitForm(e) {
+      e.preventDefault()
+      const firstName = document.getElementById("firstName").value
+      console.log(firstName)
+      const lastName = document.getElementById("lastName").value
+      const email = document.getElementById("email").value
+      const sex = document.querySelector('input[name="sex"]:checked').value
+      const support = document.getElementById("support").value
+
+      localStorage.setItem("firstName", firstName)
+      localStorage.setItem("lastName", lastName)
+      localStorage.setItem("email", email)
+      localStorage.setItem("sex", sex)
+      localStorage.setItem("support", support)
+      location.href = "profile/dashboard.html"
+      return false
+    }
+
+    document.getElementById("signup-form").addEventListener("submit", submitForm)
+  </script>
+</body>
+
+</html>
