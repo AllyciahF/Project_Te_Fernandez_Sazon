@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./dashboard.css">
+</head>
+
+<body class="page">
+  <header>
+    <img src="../logo.png" class="logo" onclick="location.href='../home-page.html'" />
+  </header>
+  <div class="profile-container">
+    <h1>Profile Page</h1>
+    <div class="info-container">
+      <h2>First Name</h2>
+      <p id="firstName"></p>
+    </div>
+    <div class="info-container">
+      <h2>Last Name</h2>
+      <p id="lastName"></p>
+    </div>
+    <div class="info-container">
+      <h2>Sex</h2>
+      <p id="sex"></p>
+    </div>
+    <div class="info-container">
+      <h2>Email</h2>
+      <p id="email"></p>
+    </div>
+    <div class="info-container">
+      <h2>Why I support this campaign?</h2>
+      <p id="support"></p>
+    </div>
+  </div>
+  <script>
+    const firstName = localStorage.getItem("firstName")
+    const lastName = localStorage.getItem("lastName")
+    const email = localStorage.getItem("email")
+    const sex = localStorage.getItem("sex")
+    const support = localStorage.getItem("support")
+
+    document.getElementById("firstName").innerHTML = firstName
+    document.getElementById("lastName").innerHTML = lastName
+    document.getElementById("sex").innerHTML = sex
+    document.getElementById("email").innerHTML = email
+    document.getElementById("support").innerHTML = support
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+img {
+  cursor: pointer;
+}
+
+html {
+  background-image: url(../turtle.png);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+h1 {
+  letter-spacing: 4px;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+h2 {
+  letter-spacing: 4px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+p {
+  border: 2px solid teal;
+  padding: 6px;
+  background-color: white;
+  min-width: 100px;
+}
+
+.page {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.profile-container {
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  width: 50%;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
